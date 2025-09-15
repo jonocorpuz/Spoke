@@ -12,6 +12,7 @@
 		FBEB2D7B2E77D52600C397C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBEB2D7A2E77D52600C397C3 /* Assets.xcassets */; };
 		FBEB2D7E2E77D52600C397C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBEB2D7D2E77D52600C397C3 /* Preview Assets.xcassets */; };
 		FBEB2D872E77DB4900C397C3 /* CarKilometersCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB2D862E77DB4900C397C3 /* CarKilometersCard.swift */; };
+		FBEB2DA32E7880B400C397C3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB2DA22E7880B400C397C3 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		FBEB2D7A2E77D52600C397C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBEB2D7D2E77D52600C397C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FBEB2D862E77DB4900C397C3 /* CarKilometersCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarKilometersCard.swift; sourceTree = "<group>"; };
+		FBEB2DA22E7880B400C397C3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				FBEB2D762E77D52400C397C3 /* SpokeApp.swift */,
 				FBEB2D782E77D52400C397C3 /* ContentView.swift */,
+				FBEB2DA22E7880B400C397C3 /* HomeView.swift */,
 				FBEB2D862E77DB4900C397C3 /* CarKilometersCard.swift */,
 				FBEB2D7A2E77D52600C397C3 /* Assets.xcassets */,
 				FBEB2D7C2E77D52600C397C3 /* Preview Content */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBEB2D872E77DB4900C397C3 /* CarKilometersCard.swift in Sources */,
+				FBEB2DA32E7880B400C397C3 /* HomeView.swift in Sources */,
 				FBEB2D792E77D52400C397C3 /* ContentView.swift in Sources */,
 				FBEB2D772E77D52400C397C3 /* SpokeApp.swift in Sources */,
 			);

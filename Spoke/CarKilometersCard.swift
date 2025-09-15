@@ -32,7 +32,8 @@ struct CarKilometersCard: View {
             // Main kilometers display
             VStack(alignment: .leading, spacing: 8) {
                 HStack(alignment: .bottom) {
-                    Text("\(Int(currentKilometers))")
+                    let kmUntilService = nextServiceKm - currentKilometers
+                    Text("\(Int(kmUntilService))")
                         .font(.system(size: 32, weight: .bold, design: .rounded))
                         .foregroundColor(.primary)
                     
@@ -44,7 +45,7 @@ struct CarKilometersCard: View {
                     Spacer()
                 }
                 
-                Text("Current mileage")
+                Text("Till Next Service")
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
@@ -80,12 +81,6 @@ struct CarKilometersCard: View {
                 ProgressView(value: (currentKilometers - lastServiceKm) / (nextServiceKm - lastServiceKm))
                     .progressViewStyle(LinearProgressViewStyle(tint: .blue))
                     .scaleEffect(x: 1, y: 0.5)
-                
-                let kmUntilService = nextServiceKm - currentKilometers
-                Text("\(Int(max(0, kmUntilService))) km until next service")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .center)
             }
         }
         .padding(20)
