@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color.black.ignoresSafeArea()
+            
+            VStack {
+                CarKilometersCard(
+                    serviceType: "Oil Change",
+                    currentKilometers: 87542,
+                    lastServiceKm: 85000,
+                    nextServiceKm: 90000
+                )
+                .padding()
+                
+                // Other UI elements...
+            }
         }
-        .padding()
     }
 }
 
