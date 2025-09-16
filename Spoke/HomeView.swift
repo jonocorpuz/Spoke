@@ -17,6 +17,12 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             Color(red: 16/255, green: 20/255, blue: 36/255).ignoresSafeArea()
+            Image(.homeviewcar3)
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity)
+                .scaleEffect(1.5)
+                .offset(y: 0)
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
@@ -29,7 +35,7 @@ struct HomeView: View {
                             .padding(.top, 24)
                         
                         // Description
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing")
+                        Text("Keep your car running smoothly with personalized maintenance tracking")
                             .font(.system(size: 16))
                             .foregroundColor(.gray)
                             .lineLimit(2)
@@ -51,60 +57,62 @@ struct HomeView: View {
                             VStack(alignment: .trailing, spacing: 4) {
                                 Text("+8.5%")
                                     .font(.system(size: 14, weight: .medium))
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color(red: 64/255, green: 89/255, blue: 111/255))
                                 
                                 RoundedRectangle(cornerRadius: 8)
-                                    .fill(.blue)
+                                    .fill(Color(red: 64/255, green: 89/255, blue: 111/255))
                                     .frame(width: 40, height: 4)
-                                }
                             }
-                            .padding(.top, 16)
                         }
-                        .padding(.horizontal, 24)
-                        .padding(.top, 50) // Space from top
+                        .padding(.top, 16)
                     }
-                
-                // Lower Maintence Tabs
-                VStack(alignment: .leading, spacing: 16) {
-                    // Overdue maintence tab
-                    HStack(alignment: .bottom, spacing: 8) {
-                        Text("Overdue")
-                            .font(.system(size: 16))
-                            .foregroundColor(.gray)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 24)
-                        
-                        Text("\(Int(overdueMaintenance))")
-                            .font(.system(size: 16))
-                            .foregroundColor(.red)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .padding(.horizontal, 24)
-                    }
-                    .padding(.horizontal, 0)
-                    .padding(.vertical, 16)
-                    .background(Color(red: 31/255, green: 39/255, blue: 63/255))
-                    .cornerRadius(8)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 10) // Space from top
                     
-                    // Upcoming maintence tab
-                    HStack(alignment: .bottom, spacing: 8) {
-                        Text("Upcoming")
-                            .font(.system(size: 16))
-                            .foregroundColor(.gray)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 24)
+                    Spacer()
+                        .frame(height: 330)
+                    // Lower Maintence Tabs
+                    VStack(alignment: .leading, spacing: 16) {
+                        // Overdue maintence tab
+                        HStack(alignment: .bottom, spacing: 8) {
+                            Text("Overdue")
+                                .font(.system(size: 16))
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 24)
+                            
+                            Text("\(Int(overdueMaintenance))")
+                                .font(.system(size: 16))
+                                .foregroundColor(.red)
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .padding(.horizontal, 24)
+                        }
+                        .padding(.horizontal, 0)
+                        .padding(.vertical, 16)
+                        .background(Color(red: 64/255, green: 89/255, blue: 111/255))
+                        .cornerRadius(8)
                         
-                        Text("\(Int(upcomingMaintenance))")
-                            .font(.system(size: 16))
-                            .foregroundColor(.orange)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .padding(.horizontal, 24)
+                        // Upcoming maintence tab
+                        HStack(alignment: .bottom, spacing: 8) {
+                            Text("Upcoming")
+                                .font(.system(size: 16))
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 24)
+                            
+                            Text("\(Int(upcomingMaintenance))")
+                                .font(.system(size: 16))
+                                .foregroundColor(.orange)
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .padding(.horizontal, 24)
+                        }
+                        .padding(.horizontal, 0)
+                        .padding(.vertical, 16)
+                        .background(Color(red: 64/255, green: 89/255, blue: 111/255))
+                        .cornerRadius(8)
                     }
-                    .padding(.horizontal, 0)
-                    .padding(.vertical, 16)
-                    .background(Color(red: 31/255, green: 39/255, blue: 63/255))
-                    .cornerRadius(8)
+                    .padding(.horizontal, 20)
                 }
-                .padding(.horizontal, 20)
             }
         }
     }
